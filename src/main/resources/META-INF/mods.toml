@@ -39,6 +39,6 @@ This mod implements Iron Fences as well as an Iron-Fencegate into the game.
 [[dependencies.IronFenceGates]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.16.1]"
     ordering="NONE"
     side="BOTH"

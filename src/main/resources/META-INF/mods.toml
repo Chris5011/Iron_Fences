@@ -10,9 +10,9 @@ loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft versio
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
-modId="ironfencegates" #mandatory
+modId="ironfences" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="1.0.1" #mandatory
+version="1.0.3" #mandatory
  # A display name for the mod
 displayName="Iron fences" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
@@ -24,7 +24,7 @@ description='''
 This mod implements Iron Fences as well as an Iron-Fencegate into the game.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.IronFenceGates]] #optional
+[[dependencies.IronFences]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -36,7 +36,7 @@ This mod implements Iron Fences as well as an Iron-Fencegate into the game.
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.IronFenceGates]]
+[[dependencies.IronFences]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.1]"

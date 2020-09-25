@@ -1,3 +1,7 @@
+#Version 1.16.3_1.1.0:
+    Updated the mod to Minecraft Forge version 1.16.3-34.1.0
+    Because this Forge version is a recommended version, this is a full release of this mod.
+
 #Version 1.16.3_1.0.0:
 	Updated the mod to Minecraft Version 1.16.3.
 	This is only a Beta-Release due to the state forge currently is in.

@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "ironfences:iron_fence",
-    "ironfences:iron_fence_gate"
+    "ironfences:iron_fence_gate",
+    "ironfences:copper_fence",
+    "ironfences:copper_fence_gate",
+	"ironfences:gold_fence",
+	"ironfences:gold_fence_gate"
   ]
 }

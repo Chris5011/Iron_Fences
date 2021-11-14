@@ -1,6 +1,26 @@
 {
+  "_comment": "Items",
+  "_comment": "Copper Nugget",
+  "item.ironfences.copper_nugget": "Copper nugget",
+  "_comment": "",
   "_comment": "Blocks",
+  "_comment": "Iron Fences",
   "block.ironfences.iron_fence_gate": "Iron Fence Gate",
   "block.ironfences.iron_fence_gate_open": "Open Iron Fence Gate",
-  "block.ironfences.iron_fence" : "Iron Fence"
+  "block.ironfences.iron_fence": "Iron Fence",
+  "_comment": "",
+  "_comment": "Copper Fences",
+  "block.ironfences.copper_fence_gate": "Copper Fence Gate",
+  "block.ironfences.copper_fence_gate_open": "Open Copper Fence Gate",
+  "block.ironfences.copper_fence": "Copper Fence",
+  "_comment": "",
+  "_comment": "Gold Fences",
+  "block.ironfences.gold_fence_gate": "Golden Fence Gate",
+  "block.ironfences.gold_fence_gate_open": "Open Golden Fence Gate",
+  "block.ironfences.gold_fence": "Golden Fence",
+  "_comment": "",
+  "_comment": "Walls",
+  "block.ironfences.iron_wall" : "Iron Wall",
+  "block.ironfences.copper_wall" : "Copper Wall",
+  "block.ironfences.gold_wall" : "Golden Wall"
 }

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "ironfences:iron_fence"
+    "ironfences:iron_fence",
+    "ironfences:copper_fence",
+    "ironfences:gold_fence"
   ]
 }

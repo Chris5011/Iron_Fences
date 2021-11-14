@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "iron_fence",
+  "group": "copper_fence",
   "pattern": [
     "W#W",
     "W#W"
   ],
   "key": {
     "#": {
-      "tag": "forge:nuggets/iron"
+      "item": "ironfences:copper_nugget"
     },
     "W": {
-      "tag": "forge:ingots/iron"
+      "item": "minecraft:copper_ingot"
     }
   },
   "result": {
-    "item": "ironfences:iron_fence",
+    "item": "ironfences:copper_fence",
     "count": 3
   }
 }

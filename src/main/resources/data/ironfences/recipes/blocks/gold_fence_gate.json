@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "iron_fence_gate",
+  "group": "gold_fence_gate",
   "pattern": [
     "#W#",
     "#W#"
   ],
   "key": {
     "#": {
-      "tag": "forge:nuggets/iron"
+      "item": "minecraft:gold_nugget"
     },
     "W": {
-      "tag": "forge:ingots/iron"
+      "item": "minecraft:gold_ingot"
     }
   },
   "result": {
-    "item": "ironfences:iron_fence_gate",
+    "item": "ironfences:gold_fence_gate",
     "count": 1
   }
 }

@@ -2,7 +2,14 @@
   "replace": false,
   "values": [
     "ironfences:iron_fence",
+    "ironfences:gold_fence",
     "ironfences:copper_fence",
-    "ironfences:gold_fence"
+    "ironfences:waxed_copper_fence",
+    "ironfences:exposed_copper_fence",
+    "ironfences:waxed_exposed_copper_fence",
+    "ironfences:weathered_copper_fence",
+    "ironfences:waxed_weathered_copper_fence",
+    "ironfences:oxidized_copper_fence",
+    "ironfences:waxed_oxidized_copper_fence"
   ]
 }

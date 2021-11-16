@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "ironfences:iron_wall",
+    "ironfences:gold_wall",
+    "ironfences:copper_wall",
+    "ironfences:waxed_copper_wall",
+    "ironfences:exposed_copper_wall",
+    "ironfences:waxed_exposed_copper_wall",
+    "ironfences:weathered_copper_wall",
+    "ironfences:waxed_weathered_copper_wall",
+    "ironfences:oxidized_copper_wall",
+    "ironfences:waxed_oxidized_copper_wall"
+  ]
+}

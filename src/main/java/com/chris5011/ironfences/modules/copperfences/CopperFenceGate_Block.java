@@ -102,6 +102,11 @@ public class CopperFenceGate_Block extends FenceGateBlock implements ICopperFenc
                     return InteractionResult.FAIL;
                 }
             } else {
+                if(blockState.getValue(OPEN)){
+                    world.playSound(null, blockPos, SoundEvents.FENCE_GATE_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                }else{
+                    world.playSound(null, blockPos, SoundEvents.FENCE_GATE_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F);
+                }
                 return super.use(blockState, world, blockPos, player, hand, blockHitResult);
             }
         }

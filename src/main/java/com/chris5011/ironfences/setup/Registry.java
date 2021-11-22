@@ -24,8 +24,6 @@ public class Registry {
 
     private final static DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, IronFences.MODID);
     private final static DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, IronFences.MODID);
-//    private final static DeferredRegister<Item> FORGE_ITEM_TAGS = DeferredRegister.create(ForgeRegistries.ITEMS, "forge");
-
 
     // Iron Fence:
     public static final RegistryObject<Block> IRON_FENCE_BLOCK = BLOCKS.register("iron_fence", () -> new FenceBlock(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()));
@@ -43,21 +41,19 @@ public class Registry {
     public static final RegistryObject<Block> COPPER_FENCE_BLOCK = BLOCKS.register("copper_fence", () -> new CopperFenceBlock(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.UNAFFECTED, Block.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> COPPER_FENCE_BLOCK_ITEM = ITEMS.register("copper_fence", () -> new BlockItem(COPPER_FENCE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 
-    public static final RegistryObject<Block> OXIDIZED_COPPER_FENCE_BLOCK = BLOCKS.register("oxidized_copper_fence", () -> new CopperFenceBlock(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.OXIDIZED, Block.Properties.of(Material.METAL, MaterialColor.WARPED_NYLIUM).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Item> OXIDIZED_COPPER_FENCE_BLOCK_ITEM = ITEMS.register("oxidized_copper_fence", () -> new BlockItem(OXIDIZED_COPPER_FENCE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
-
     public static final RegistryObject<Block> EXPOSED_COPPER_FENCE_BLOCK = BLOCKS.register("exposed_copper_fence", () -> new CopperFenceBlock(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.EXPOSED, Block.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_LIGHT_GRAY).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> EXPOSED_COPPER_FENCE_BLOCK_ITEM = ITEMS.register("exposed_copper_fence", () -> new BlockItem(EXPOSED_COPPER_FENCE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 
     public static final RegistryObject<Block> WEATHERED_COPPER_FENCE_BLOCK = BLOCKS.register("weathered_copper_fence", () -> new CopperFenceBlock(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.WEATHERED, Block.Properties.of(Material.METAL, MaterialColor.WARPED_STEM).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> WEATHERED_COPPER_FENCE_BLOCK_ITEM = ITEMS.register("weathered_copper_fence", () -> new BlockItem(WEATHERED_COPPER_FENCE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 
+    public static final RegistryObject<Block> OXIDIZED_COPPER_FENCE_BLOCK = BLOCKS.register("oxidized_copper_fence", () -> new CopperFenceBlock(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.OXIDIZED, Block.Properties.of(Material.METAL, MaterialColor.WARPED_NYLIUM).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Item> OXIDIZED_COPPER_FENCE_BLOCK_ITEM = ITEMS.register("oxidized_copper_fence", () -> new BlockItem(OXIDIZED_COPPER_FENCE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+
+
     //Waxed Copper Fences:
     public static final RegistryObject<Block> WAXED_COPPER_FENCE_BLOCK = BLOCKS.register("waxed_copper_fence", () -> new CopperFenceBlock(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.UNAFFECTED, Block.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> WAXED_COPPER_FENCE_BLOCK_ITEM = ITEMS.register("waxed_copper_fence", () -> new BlockItem(WAXED_COPPER_FENCE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
-
-    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_FENCE_BLOCK = BLOCKS.register("waxed_oxidized_copper_fence", () -> new CopperFenceBlock(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.OXIDIZED, Block.Properties.of(Material.METAL, MaterialColor.WARPED_NYLIUM).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Item> WAXED_OXIDIZED_COPPER_FENCE_BLOCK_ITEM = ITEMS.register("waxed_oxidized_copper_fence", () -> new BlockItem(WAXED_OXIDIZED_COPPER_FENCE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 
     public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_FENCE_BLOCK = BLOCKS.register("waxed_exposed_copper_fence", () -> new CopperFenceBlock(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.EXPOSED, Block.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_LIGHT_GRAY).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> WAXED_EXPOSED_COPPER_FENCE_BLOCK_ITEM = ITEMS.register("waxed_exposed_copper_fence", () -> new BlockItem(WAXED_EXPOSED_COPPER_FENCE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
@@ -65,32 +61,36 @@ public class Registry {
     public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_FENCE_BLOCK = BLOCKS.register("waxed_weathered_copper_fence", () -> new CopperFenceBlock(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.WEATHERED, Block.Properties.of(Material.METAL, MaterialColor.WARPED_STEM).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> WAXED_WEATHERED_COPPER_FENCE_BLOCK_ITEM = ITEMS.register("waxed_weathered_copper_fence", () -> new BlockItem(WAXED_WEATHERED_COPPER_FENCE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 
+    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_FENCE_BLOCK = BLOCKS.register("waxed_oxidized_copper_fence", () -> new CopperFenceBlock(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.OXIDIZED, Block.Properties.of(Material.METAL, MaterialColor.WARPED_NYLIUM).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Item> WAXED_OXIDIZED_COPPER_FENCE_BLOCK_ITEM = ITEMS.register("waxed_oxidized_copper_fence", () -> new BlockItem(WAXED_OXIDIZED_COPPER_FENCE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+
 
     //Copper Fence Gates:
     public static final RegistryObject<Block> COPPER_FENCE_GATE_BLOCK = BLOCKS.register("copper_fence_gate", () -> new CopperFenceGate_Block(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.UNAFFECTED, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> COPPER_FENCE_GATE_ITEM = ITEMS.register("copper_fence_gate", () -> new BlockItem(COPPER_FENCE_GATE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 
-    public static final RegistryObject<Block> OXIDIZED_COPPER_FENCE_GATE_BLOCK = BLOCKS.register("oxidized_copper_fence_gate", () -> new CopperFenceGate_Block(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.OXIDIZED, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_NYLIUM).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER)));
-    public static final RegistryObject<Item> OXIDIZED_COPPER_FENCE_GATE_ITEM = ITEMS.register("oxidized_copper_fence_gate", () -> new BlockItem(OXIDIZED_COPPER_FENCE_GATE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<Block> WEATHERED_COPPER_FENCE_GATE_BLOCK = BLOCKS.register("weathered_copper_fence_gate", () -> new CopperFenceGate_Block(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.WEATHERED, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_STEM).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER)));
+    public static final RegistryObject<Item> WEATHERED_COPPER_FENCE_GATE_ITEM = ITEMS.register("weathered_copper_fence_gate", () -> new BlockItem(WEATHERED_COPPER_FENCE_GATE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 
     public static final RegistryObject<Block> EXPOSED_COPPER_FENCE_GATE_BLOCK = BLOCKS.register("exposed_copper_fence_gate", () -> new CopperFenceGate_Block(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.EXPOSED, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_LIGHT_GRAY).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER)));
     public static final RegistryObject<Item> EXPOSED_COPPER_FENCE_GATE_ITEM = ITEMS.register("exposed_copper_fence_gate", () -> new BlockItem(EXPOSED_COPPER_FENCE_GATE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 
-    public static final RegistryObject<Block> WEATHERED_COPPER_FENCE_GATE_BLOCK = BLOCKS.register("weathered_copper_fence_gate", () -> new CopperFenceGate_Block(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.WEATHERED, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_STEM).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER)));
-    public static final RegistryObject<Item> WEATHERED_COPPER_FENCE_GATE_ITEM = ITEMS.register("weathered_copper_fence_gate", () -> new BlockItem(WEATHERED_COPPER_FENCE_GATE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<Block> OXIDIZED_COPPER_FENCE_GATE_BLOCK = BLOCKS.register("oxidized_copper_fence_gate", () -> new CopperFenceGate_Block(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.OXIDIZED, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_NYLIUM).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER)));
+    public static final RegistryObject<Item> OXIDIZED_COPPER_FENCE_GATE_ITEM = ITEMS.register("oxidized_copper_fence_gate", () -> new BlockItem(OXIDIZED_COPPER_FENCE_GATE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+
 
     //Waxed Copper Fence Gates:
     public static final RegistryObject<Block> WAXED_COPPER_FENCE_GATE_BLOCK = BLOCKS.register("waxed_copper_fence_gate", () -> new CopperFenceGate_Block(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.UNAFFECTED, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).strength(3.0F, 6.0F).sound(SoundType.COPPER).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> WAXED_COPPER_FENCE_GATE_ITEM = ITEMS.register("waxed_copper_fence_gate", () -> new BlockItem(WAXED_COPPER_FENCE_GATE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
-
-    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_FENCE_GATE_BLOCK = BLOCKS.register("waxed_oxidized_copper_fence_gate", () -> new CopperFenceGate_Block(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.OXIDIZED, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_NYLIUM).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER)));
-    public static final RegistryObject<Item> WAXED_OXIDIZED_COPPER_FENCE_GATE_ITEM = ITEMS.register("waxed_oxidized_copper_fence_gate", () -> new BlockItem(WAXED_OXIDIZED_COPPER_FENCE_GATE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 
     public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_FENCE_GATE_BLOCK = BLOCKS.register("waxed_exposed_copper_fence_gate", () -> new CopperFenceGate_Block(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.EXPOSED, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_LIGHT_GRAY).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER)));
     public static final RegistryObject<Item> WAXED_EXPOSED_COPPER_FENCE_GATE_ITEM = ITEMS.register("waxed_exposed_copper_fence_gate", () -> new BlockItem(WAXED_EXPOSED_COPPER_FENCE_GATE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 
     public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_FENCE_GATE_BLOCK = BLOCKS.register("waxed_weathered_copper_fence_gate", () -> new CopperFenceGate_Block(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.WEATHERED, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_STEM).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER)));
     public static final RegistryObject<Item> WAXED_WEATHERED_COPPER_FENCE_GATE_ITEM = ITEMS.register("waxed_weathered_copper_fence_gate", () -> new BlockItem(WAXED_WEATHERED_COPPER_FENCE_GATE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+
+    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_FENCE_GATE_BLOCK = BLOCKS.register("waxed_oxidized_copper_fence_gate", () -> new CopperFenceGate_Block(ICopperFenceGate_BlockBase.CopperFenceGateWeatherState.OXIDIZED, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_NYLIUM).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER)));
+    public static final RegistryObject<Item> WAXED_OXIDIZED_COPPER_FENCE_GATE_ITEM = ITEMS.register("waxed_oxidized_copper_fence_gate", () -> new BlockItem(WAXED_OXIDIZED_COPPER_FENCE_GATE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 
 
     //Gold Fence:
@@ -140,7 +140,6 @@ public class Registry {
 
     public static void registerRegistries() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-//        FORGE_ITEM_TAGS.register(eventBus);
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

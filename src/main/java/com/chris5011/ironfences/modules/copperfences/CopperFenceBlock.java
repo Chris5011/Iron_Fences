@@ -10,6 +10,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -26,7 +27,6 @@ import net.minecraft.world.phys.BlockHitResult;
 
 import java.util.Map;
 import java.util.Optional;
-import java.util.Random;
 import java.util.function.Supplier;
 
 public class CopperFenceBlock extends FenceBlock implements ICopperFenceGate_BlockBase{
@@ -120,7 +120,7 @@ public class CopperFenceBlock extends FenceBlock implements ICopperFenceGate_Blo
         return Optional.empty();
     }
 
-    public void randomTick(BlockState state, ServerLevel serverWorld, BlockPos pos, Random rd) {
+    public void randomTick(BlockState state, ServerLevel serverWorld, BlockPos pos, RandomSource rd) {
         if (!isWaxed(state)) {
             this.onRandomTick(state, serverWorld, pos, rd);
         }
